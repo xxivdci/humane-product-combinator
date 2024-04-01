@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
             combinations.push(...generateCombinations(values, i));
         }
         renderCombinations(combinations);
-        downloadCSVButton.style.display = 'inline'; // Mostra o botão "Download CSV" após gerar as combinações
+        downloadCSVButton.style.display = 'inline';
     });
 
     const addMoreFieldsButton = document.getElementById('addMoreFieldsButton');
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const newInput = document.createElement('input');
         newInput.type = 'text';
         newInput.classList.add('csvValueInput');
-        newInput.classList.add('productField'); // Adiciona a classe para o estilo do primeiro produto
-        newInput.placeholder = `Product ${csvInputContainer.querySelectorAll('.csvValueInput').length + 1}`;
+        newInput.classList.add('productField'); 
+        newInput.placeholder = `Produto ${csvInputContainer.querySelectorAll('.csvValueInput').length + 1}`;
         csvInputContainer.insertBefore(newInput, addMoreFieldsButton);
     });
 
